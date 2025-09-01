@@ -10,6 +10,14 @@ export class PrintBlockElement extends LitElement {
       padding: 2rem;
       text-align: center;
     }
+    ::slotted([slot="content"]) {
+      font-family: var(--wa-font-family-body);
+    }
+    ::slotted(:not([slot])) {
+      background: var(--wa-color-brand-40);
+      color: white;
+      font-family: var(--wa-font-family-body);
+    }
   `;
 
   override render() {
